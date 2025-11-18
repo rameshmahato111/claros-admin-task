@@ -1,7 +1,6 @@
 
 import { FaHome, FaUsers, FaProductHunt } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
-import Logo from "../assets/logo-img-2-opti.png";
 import { IoAnalytics } from "react-icons/io5";
 import { FcCollaboration } from "react-icons/fc";
 import { BiDollar } from "react-icons/bi";
@@ -28,7 +27,7 @@ const SideNavbar = ({ closeNav }: { closeNav: () => void }) => {
       <div>
       
         <div className="flex items-center gap-3 mb-12 ring rounded-lg ring-gray-900/5 shadow-lg px-2">
-          <img src={Logo} alt="logo" className="w-12 h-12 object-contain" />
+          <img src='./assets/logo/logo-img-claros-home.png' alt="logo" className="w-12 h-12 object-contain" />
           <span className="text-2xl font-semibold text-gray-800 tracking-tight">
             Claros
           </span>

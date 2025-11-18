@@ -1,3 +1,5 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import Layout from "./pages/LayOut"
 
 
 
@@ -5,11 +7,13 @@ function App() {
   
 
   return (
-    <>
-      <div className="text-center text-red-400">
-        <h1>claros analytics </h1>
-      </div>
-    </>
+   <BrowserRouter>
+   <Routes>
+    <Route path="/" element={<Layout/>}>
+    
+    </Route>
+   </Routes>
+   </BrowserRouter>
   )
 }
 
