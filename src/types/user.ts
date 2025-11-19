@@ -1,6 +1,6 @@
 export interface User {
   id: string;
-  email: string;
+
   name: {
     firstname: string;
     lastname: string;
@@ -10,4 +10,5 @@ export interface User {
     city: string;
     street: string;
   };
+  username: string
 }

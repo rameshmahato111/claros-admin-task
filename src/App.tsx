@@ -1,8 +1,10 @@
 import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Layout from './pages/LayOut'
-import ProductComponent from './components/ProductComponent'
 import UserComponent from './components/UserComponent'
+import HomeComponent from './components/HomeComponent'
+import PageNotFound from './pages/PageNotFound'
+import Product from './pages/Product'
 
 
 function App() {
@@ -11,12 +13,12 @@ function App() {
       <Routes>
         <Route path='/' element={<Layout />}>
          
-      
-          <Route path='/products' element={<ProductComponent />} />
+           <Route index element={<HomeComponent />}/>
+          <Route path='/products' element={<Product />} />
           <Route path='/users' element={<UserComponent />} />
           
 
-          <Route path='/*' element={<p>Page not found.</p> }/>
+          <Route path='/*' element={<PageNotFound/> }/>
 
 
           {/* Add more nested routes here */}
