@@ -32,12 +32,8 @@ const Product = () => {
         <Pagination
           data={products ?? []}
           pageSize={5}
-          renderRow={(pagedProducts) => (
-            <ProductComponent
-              products={
-                Array.isArray(pagedProducts) ? pagedProducts : [pagedProducts]
-              }
-            />
+          renderRow={(product) => (
+            <ProductComponent product={product} />
           )}
         />
       </div>
