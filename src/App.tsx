@@ -1,10 +1,10 @@
 import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Layout from './pages/LayOut'
-import UserComponent from './components/UserComponent'
 import HomeComponent from './components/HomeComponent'
 import PageNotFound from './pages/PageNotFound'
 import Product from './pages/Product'
+import User from './pages/User'
 
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
          
            <Route index element={<HomeComponent />}/>
           <Route path='/products' element={<Product />} />
-          <Route path='/users' element={<UserComponent />} />
+          <Route path='/users' element={<User />} />
           
 
           <Route path='/*' element={<PageNotFound/> }/>

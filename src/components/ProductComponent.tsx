@@ -18,7 +18,6 @@ const ProductComponent = ({ product }: ProductComponentProps) => {
           className="size-8 object-contain"
           alt={product.title}
         />
-        {/* remove slice while testing in cypress */}
         <span className="md:inline-block hidden">
           {product.title.slice(0, 10)}...
         </span>
