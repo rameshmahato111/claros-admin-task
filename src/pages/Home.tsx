@@ -3,6 +3,7 @@ import HomeComponent from "../components/HomeComponent"
 import ProductComponent from "../components/ProductComponent"
 import UserComponent from "../components/UserComponent"
 import { useProductQuery } from "../services/products/product.query"
+import { Link } from "react-router-dom"
 
 const Home = () => {
   const { data: products, isLoading: loadingProducts } = useProductQuery()
@@ -13,9 +14,13 @@ const Home = () => {
       <HomeComponent />
 
       <section className="bg-gray-400/5  rounded-lg p-6 shadow-lg">
-        <h2 className="text-xl font-semibold text-gray-700 mb-4">
+        <div className="flex items-center justify-between font-semibold text-gray-700 mx-1.5">
+          <p className="text-xl mb-4">
           Recently Added Products
-        </h2>
+        </p>
+         <Link to={'/products'}>View All Products</Link>
+        </div>
+        
         
         {loadingProducts ? (
           <div className="text-gray-500 py-4">Loading products...</div>
@@ -29,9 +34,12 @@ const Home = () => {
       </section>
 
       <section className="bg-white border-gray-950/5 rounded-lg p-6 shadow-lg">
-        <h2 className="text-xl font-semibold text-gray-700 mb-4">
+        <div className="flex items-center justify-between font-semibold text-gray-700 mx-1.5">
+          <p className="text-xl mb-4">
           Recently Joined Users
-        </h2>
+        </p>
+         <Link to={'/users'}>View All Users</Link>
+        </div>
         {loadingUsers ? (
           <div className="text-gray-500 py-4">Loading users...</div>
         ) : (
