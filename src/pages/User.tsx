@@ -30,7 +30,8 @@ const User = () => {
         Something went wrong. Please try again.
       </p>
     );
-  return  <section className="md:p-4 p-2 rounded-lg ring shadow-lg ring-gray-900/5 space-y-4 py-5">
+  return  <section className="md:p-4 p-2 rounded-lg ring shadow-lg ring-gray-900/5 space-y-4 py-5 mx-2 mt-10">
+    <h1>User details </h1>
       <div className="mb-4">
         <SearchComponent
           onSearch={(value) => {
