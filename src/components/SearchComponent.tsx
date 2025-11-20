@@ -15,7 +15,6 @@ const SearchComponent = ({
 }: SearchComponentProps) => {
   const [value, setValue] = useState(defaultValue);
 
-  // Sync with defaultValue when it changes (e.g., from URL params)
   useEffect(() => {
     setValue(defaultValue);
   }, [defaultValue]);
