@@ -1,75 +1,55 @@
-# React + TypeScript + Vite
+## Instruction to run this application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Prerequisites
 
-Currently, two official plugins are available:
+Node JS version 18 or above
+NPM package manager
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Installation Process
 
-## React Compiler
+1. first clone the github repository with the following commands
+   go to your terminal and type
+   git clone https://github.com/rameshmahato111/claros-admin-task.git
+   cd clarosanalytics
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+2. Install dependencies using the command
+   in the terminal
+   npm install
 
-Note: This will impact Vite dev & build performances.
+## Running the Application
 
-## Expanding the ESLint configuration
+### To run the application in the Development Mode
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+use this command in your terminal
+npm run dev
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+copy this and paste in your browser `http://localhost:5173` (default Vite port)।
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Build for Production
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+For the Production build
+use this command in the terminal
+npm run build
+this will generate dist folder
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Preview Production Build
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+npm run preview
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Tech Stack
+
+React 19
+TypeScript
+Vite
+Tailwind CSS
+React Router Dom
+TanStack Query
+React Icons
+Cypress
+
+## Available Scripts
+
+- `npm run dev` - Development server start
+- `npm run build` - Production build
+- `npm run preview` - Production build preview
+- `npm run lint` - Code linting
