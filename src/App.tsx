@@ -1,10 +1,10 @@
 import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Layout from './pages/LayOut'
-import HomeComponent from './components/HomeComponent'
 import PageNotFound from './pages/PageNotFound'
 import Product from './pages/Product'
 import User from './pages/User'
+import Home from './pages/Home'
 
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Layout />}>
          
-           <Route index element={<HomeComponent />}/>
+           <Route index element={<Home />}/>
           <Route path='/products' element={<Product />} />
           <Route path='/users' element={<User />} />
           

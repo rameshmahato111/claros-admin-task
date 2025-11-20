@@ -22,22 +22,17 @@ const SideNavbar = ({ closeNav }: { closeNav: () => void }) => {
   ];
 
   return (
-    <nav className="flex flex-col justify-between gap-40 lg:px-0 px-4  py-4">
-      
-      <div>
-      
-        <div className="flex items-center gap-3 mb-12 ring rounded-lg ring-gray-900/5 shadow-lg px-2">
+    <nav className="flex flex-col h-full lg:px-0 px-4 py-4">
+      <div className="flex-1">
+        <div className="flex items-center gap-3 mb-12 ring rounded-lg ring-gray-900/5 shadow-lg px-2 py-2">
           <img src='./assets/logo/logo-img-claros-home.png' alt="logo" className="w-12 h-12 object-contain" />
           <span className="text-2xl font-semibold text-gray-800 tracking-tight">
             Claros
           </span>
-          <div>
-            
-          </div>
         </div>
 
         {/* Navigation Links */}
-        <ul className="flex flex-col justify-between space-y-5 ">
+        <ul className="flex flex-col space-y-2">
           {NavItems.map((item) => (
             <li key={item.name}>
               <NavLink
@@ -57,11 +52,8 @@ const SideNavbar = ({ closeNav }: { closeNav: () => void }) => {
               </NavLink>
             </li>
           ))}
-      
         </ul>
       </div>
-
-     
     </nav>
   );
 };
